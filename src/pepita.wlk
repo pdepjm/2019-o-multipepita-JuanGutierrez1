@@ -1,3 +1,11 @@
+object roque {
+	method entrenar(ave){
+		ave.vola(10)
+		ave.come(alpiste)
+		ave.vola(5)
+		ave.haceLoQueQuieras()
+	}
+}
 object pepita {
 	var energia = 100
 
