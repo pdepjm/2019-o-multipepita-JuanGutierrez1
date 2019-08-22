@@ -91,14 +91,14 @@ object canelon {
 	}
 	method energiaQueOtorga() { 
 		energia = 20
+		if(tieneQueso && tieneSalsa){
+			return energia + 5 + 7
+		}
 		if(tieneSalsa){
 			return energia + 5
 		}
 		if(tieneQueso){
 			return energia + 7
-		}
-		if(tieneQueso && tieneSalsa){
-			return energia + 5 + 7
 		}
 		return energia
 	}	
