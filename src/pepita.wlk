@@ -63,15 +63,19 @@ object manzana {
 }
 
 object mijo {
-	var energia
+	var estaMojado = false
 	method energiaQueOtorga() { 
-		return energia
+		if(estaMojado){
+			return 15
+		}else{
+			return 20
+		}
 	}	
 	method mojarse(){
-		energia = 15 
+		estaMojado = true 
 	}
 	method secarse(){
-		energia = 20
+		estaMojado = false
 	}
 }
 
@@ -88,10 +92,13 @@ object canelon {
 	method energiaQueOtorga() { 
 		energia = 20
 		if(tieneSalsa){
-			energia += 5
+			return energia + 5
 		}
 		if(tieneQueso){
-			energia += 7
+			return energia + 7
+		}
+		if(tieneQueso && tieneSalsa){
+			return energia + 5 + 7
 		}
 		return energia
 	}	
